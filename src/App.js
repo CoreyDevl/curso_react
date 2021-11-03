@@ -1,28 +1,28 @@
-import logo from './logo.svg';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 import './App.css';
-import SayMyName from "./components/SayMyName"
-import Pessoa from "./components/Pessoa"
-import Frase from "./components/Frase"
+import Home from './pages/Home';
+import Empresa from './pages/Empresa';
+import Contato from './pages/Contato';
+import NavBar from './components/layout/NavBar';
+import Footer from './components/layout/Footer';
 function App() {
  
-   const name = "Melão"
-  return (
-    <div className="App">
- 
-      
-      <SayMyName nome="GUERRILHA" />
-      <SayMyName nome="BumBum" />
-      <SayMyName nome="NaNave" />
-      <SayMyName nome={name} />
-      <Frase />
-      <Frase />
-      <Pessoa 
-      nome="Umbigo"
-      idade="30"
-      profissao="Programador"
-      foto="https://via.placeholder.com/150"
-      />
-    </div>
+     return (
+ <Router>
+<NavBar />
+   <Switch>
+     <Route exact path="/">
+       <Home/>
+     </Route>
+     <Route path="/Empresa">
+       <Empresa/>
+     </Route>
+     <Route path="/Contato">
+       <Contato/>
+     </Route>
+   </Switch>
+   <Footer/>
+ </Router>
   );
 }
 

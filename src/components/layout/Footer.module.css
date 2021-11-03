@@ -1,0 +1,15 @@
+.socialMedia_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.socialMedia_list li {
+    margin: 0 1em;
+}
+
+.socialMedia_list svg{
+    font-size: 1.5em;
+    cursor: pointer;
+}
