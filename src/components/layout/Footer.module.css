@@ -1,3 +1,10 @@
+.footer{
+    background-color: #222;
+    color: #FFF;
+    padding: 1.2em;
+    text-align: center;
+}
+
 .socialMedia_list{
     display: flex;
     justify-content: center;
@@ -12,4 +19,18 @@
 .socialMedia_list svg{
     font-size: 1.5em;
     cursor: pointer;
+}
+
+.socialMedia_list li:hover{
+    color: #FFBB33;
+}
+
+.copyRight{
+    margin-top: 1em;
+}
+
+.copyRight span{
+    font-weight: bold;
+    color: #ffbb33;
+    
 }

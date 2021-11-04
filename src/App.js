@@ -7,6 +7,7 @@ import NewProject from './pages/NewProject';
 import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
 import Container from './components/layout/Container'
+import Projects from './pages/Projects';
 function App() {
  
      return (
@@ -19,6 +20,9 @@ function App() {
        </Route>
        <Route path="/empresa">
          <Empresa />
+       </Route>
+       <Route path="/projects">
+         <Projects />
        </Route>
        <Route path="/contato">
          <Contato />
