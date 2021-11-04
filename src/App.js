@@ -3,23 +3,30 @@ import './App.css';
 import Home from './pages/Home';
 import Empresa from './pages/Empresa';
 import Contato from './pages/Contato';
+import NewProject from './pages/NewProject';
 import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
+import Container from './components/layout/Container'
 function App() {
  
      return (
  <Router>
 <NavBar />
    <Switch>
-     <Route exact path="/">
-       <Home/>
-     </Route>
-     <Route path="/Empresa">
-       <Empresa/>
-     </Route>
-     <Route path="/Contato">
-       <Contato/>
-     </Route>
+     <Container customClass="minHeight">
+       <Route exact path="/">
+         <Home />
+       </Route>
+       <Route path="/empresa">
+         <Empresa />
+       </Route>
+       <Route path="/contato">
+         <Contato />
+       </Route>
+       <Route path="/newproject">
+         <NewProject />
+       </Route>
+     </Container>
    </Switch>
    <Footer/>
  </Router>
