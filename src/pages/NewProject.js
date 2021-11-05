@@ -6,7 +6,7 @@ return(
 <div className={styles.newProjectContainer}>
     <h1>Criar Projeto</h1>
     <p>Crie seu projeto para depois adicionar os serviço</p>
-    <ProjectForm />
+    <ProjectForm btnText="Criar Projeto"/>
 </div>
 )
 }
