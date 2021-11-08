@@ -1,0 +1,10 @@
+.projectContainer{
+    padding: 2em;
+}
+
+.titleContainer{
+    max-width:1060px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
