@@ -10,7 +10,7 @@ function createPost(project){
     project.cost=0
     project.services=[]
 
-    fetch("http://localhost:5000/projects", {
+    fetch("http://localhost:5000/project", {
         method: 'POST',
         headers: {
             'Content-type': 'application/json',
@@ -21,6 +21,7 @@ function createPost(project){
     .then((data) => {
          console.log(data)
          //depois tem o Redirect
+         history.push('/projects', {message: 'Projeto criado com sucesso!'})
     })
     .catch(err => console.log(err))
 }
