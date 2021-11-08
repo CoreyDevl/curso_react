@@ -3,14 +3,34 @@ import styles from './Projects.module.css'
 import Message from "../components/layout/Message"
 import Container from '../components/layout/Container'
 import LinkButton from "../components/layout/LinkButton"
+import ProjectCard from '../components/projects/ProjectCard'
+import {useState, useEffect} from 'react'
 
 function Projects(){
-
+  const [projects, setProjects] = useState([])
   const location = useLocation()
   let message = ''
   if(location.state){
     message = location.state.message
   }
+
+  useEffect(() => {
+
+    fetch('http://localhost:5000/projects', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+      setProjects(data)
+     
+    })
+    .catch(err => console.log(err))
+  }, [])
+
     return (
   <div className={styles.projectContainer}>
    <div className={styles.titleContainer}>
@@ -19,7 +39,8 @@ function Projects(){
      </div>   
      {message && <Message  type="sucess" msg={message}/>}
      <Container customClass="start">
-       <p>Projetos</p>
+      {projects.length > 0 && 
+      projects.map((project) => <ProjectCard name={project.name}/>)}
      </Container>
   </div>
     )
