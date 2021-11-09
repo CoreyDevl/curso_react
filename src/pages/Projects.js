@@ -8,8 +8,10 @@ import {useState, useEffect} from 'react'
 
 function Projects(){
   const [projects, setProjects] = useState([])
+
   const location = useLocation()
   let message = ''
+
   if(location.state){
     message = location.state.message
   }
@@ -22,9 +24,9 @@ function Projects(){
         'Content-Type': 'application/json',
       },
     })
-    .then(res => res.json())
-    .then(data => {
-      console.log(data)
+    .then((res) => res.json())
+    .then((data) => {
+     
       setProjects(data)
      
     })
@@ -40,7 +42,13 @@ function Projects(){
      {message && <Message  type="sucess" msg={message}/>}
      <Container customClass="start">
       {projects.length > 0 && 
-      projects.map((project) => <ProjectCard name={project.name}/>)}
+      projects.map((project) => <ProjectCard 
+      name={project.name}
+      budget={project.budget}
+      category={project.category.name}
+      key={project.id}
+
+      />)}
      </Container>
   </div>
     )
