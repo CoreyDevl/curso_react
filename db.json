@@ -1,8 +1,8 @@
 {
   "projects": [
     {
-      "name": "ewqewq",
-      "budget": "12312",
+      "name": "um bom projeto",
+      "budget": "10000",
       "category": {
         "id": "3",
         "name": "Design"
@@ -12,48 +12,15 @@
       "id": 1
     },
     {
-      "name": "Garotão",
-      "budget": "12000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 2
-    },
-    {
-      "name": "Projeto ingenuo",
-      "budget": "100",
+      "name": "um projeto ingenuo",
+      "budget": "20",
       "category": {
         "id": "4",
         "name": "Planejamento"
       },
       "cost": 0,
       "services": [],
-      "id": 3
-    },
-    {
-      "name": "projeto 1",
-      "budget": "123",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 4
-    },
-    {
-      "name": "projeto 2",
-      "budget": "12344",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 5
+      "id": 2
     }
   ],
   "categories": [
