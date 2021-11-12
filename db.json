@@ -1,14 +1,21 @@
 {
   "projects": [
     {
-      "name": "um bom projeto",
-      "budget": "10000",
+      "name": "um bom projetinho",
+      "budget": "328",
       "category": {
-        "id": "3",
-        "name": "Design"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 100,
+      "services": [
+        {
+          "name": "lokura",
+          "cost": "100",
+          "description": "compra e venda",
+          "id": "e07295fe-6e40-456a-b2d6-ceb35ab5c946"
+        }
+      ],
       "id": 1
     },
     {
