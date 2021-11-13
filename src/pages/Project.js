@@ -7,11 +7,13 @@ import Container from '../components/layout/Container'
 import ProjectForm from '../components/projects/ProjectForm'
 import Message from '../components/layout/Message'
 import ServiceForm from '../components/service/ServiceForm'
+import ServiceCard from '../components/service/ServiceCard'
 
 function Project(){
 
 const {id} = useParams()
 const [project, setProject] = useState([])
+const [services, setServices] = useState([])
 const [showProjectForm, setShowProjectForm] = useState(false)
 const [showServiceForm, setShowServiceForm] = useState(false)
 const [message, setMessage] = useState()
@@ -26,6 +28,7 @@ useEffect(() => {
     .then(res => res.json())
     .then((data) => {
         setProject(data)
+        setServices(data.services)
     })
     .catch(err => console.log)
  }, 3000)
@@ -54,6 +57,10 @@ useEffect(() => {
             setType('success')
         })
         .catch(err => console.log(err))
+    }
+
+    function removeService(){
+        
     }
 
     function toggleProjectForm(){
@@ -90,8 +97,7 @@ useEffect(() => {
         })
         .then(res => res.json())
         .then((data => {
-            //exibir os serviços
-            console.log(data)
+           setShowServiceForm(false)
         }))
         .catch(err => console.log(err))
     }
@@ -142,7 +148,18 @@ useEffect(() => {
     </div>
     <h2>Serviços:</h2>
     <Container customClass="start">
-    <p>Itens de Serviços</p>
+    {services.length > 0 &&
+    services.map((service) => (
+        <ServiceCard 
+        id={service.id}
+        name={service.name}
+        cost={service.cost}
+        description={service.description}
+        key={service.id}
+        handleRemove={removeService}
+        />
+    ))}
+    {services.length === 0 && <p>Não existem serviços cadastrados neste projeto.</p>}
     </Container>
 </Container>
 </div> 

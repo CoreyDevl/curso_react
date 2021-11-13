@@ -7,13 +7,25 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 100,
+      "cost": 152,
       "services": [
         {
           "name": "lokura",
           "cost": "100",
           "description": "compra e venda",
           "id": "e07295fe-6e40-456a-b2d6-ceb35ab5c946"
+        },
+        {
+          "name": "encanador",
+          "cost": "30",
+          "description": "troca de cano",
+          "id": "13a1979a-5441-472e-a199-0646a2343c5a"
+        },
+        {
+          "name": "adsa",
+          "cost": "22",
+          "description": "passear com o cachorrinho do dono do projeto",
+          "id": "0f326cf6-4ae3-4e9f-8dfe-81f68af229a9"
         }
       ],
       "id": 1
