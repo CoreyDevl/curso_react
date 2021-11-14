@@ -7,7 +7,7 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 152,
+      "cost": 230,
       "services": [
         {
           "name": "lokura",
@@ -22,10 +22,10 @@
           "id": "13a1979a-5441-472e-a199-0646a2343c5a"
         },
         {
-          "name": "adsa",
-          "cost": "22",
-          "description": "passear com o cachorrinho do dono do projeto",
-          "id": "0f326cf6-4ae3-4e9f-8dfe-81f68af229a9"
+          "name": "passear com o cachorrinho",
+          "cost": "100",
+          "description": "cuidar de passear com o  cachorrinho",
+          "id": "c364b79f-3f45-42c1-9837-ea458199eca4"
         }
       ],
       "id": 1
